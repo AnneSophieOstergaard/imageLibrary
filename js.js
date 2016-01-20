@@ -1,16 +1,19 @@
 var initImageList = [
         {
             name: "Pretty",
-            url: "https://c1.staticflickr.com/9/8093/8494383957_ebbebaca4d_n.jpg"
+            url: "https://s-media-cache-ak0.pinimg.com/736x/a9/59/66/a95966fa434cabe85484f0ee0264ee0a.jpg"
         }, {
             name: "Wait here, I have gone to get help",
-            url: "http://www.thejealouscurator.com/blog/wp-content/uploads/2013/12/newneonshow2.jpg"
+            url: "https://s-media-cache-ak0.pinimg.com/736x/6b/67/f9/6b67f957599e2f9ad2392488b977e50b.jpg"
         }, {
             name: "Pretty",
-            url: "https://c1.staticflickr.com/5/4045/4644606033_c4c8bc47ff_n.jpg"
+            url: "https://s-media-cache-ak0.pinimg.com/736x/cd/4d/d9/cd4dd9b4598f23253e4581191d05e98c.jpg"
         }, {
             name: "Pretty",
-            url: "http://data.whicdn.com/images/45650272/large.jpg"
+            url: "https://s-media-cache-ak0.pinimg.com/736x/60/b6/d4/60b6d465a09193cdb8a3f3d2ff6304d1.jpg"
+        }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/ce/59/fa/ce59fa4d0758cc1ed33547b70f7a2bdf.jpg"
         }, {
             name: "Pretty",
             url: "https://s-media-cache-ak0.pinimg.com/736x/c4/50/fd/c450fd19ba1c5d52c920a710bbdbd081.jpg"
