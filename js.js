@@ -1,4 +1,4 @@
-var initImageList = [
+var initImageArray = [
         {
             name: "Pretty",
             url: "https://s-media-cache-ak0.pinimg.com/736x/a9/59/66/a95966fa434cabe85484f0ee0264ee0a.jpg"
@@ -106,7 +106,7 @@ var initImageList = [
             url: "https://s-media-cache-ak0.pinimg.com/736x/11/cf/be/11cfbee18ea0a177a5d9298f80991c86.jpg"
         }
     ],
-    addImageList = [
+    addImageArray = [
         {
             name: "Image1",
             url: "http://farm5.staticflickr.com/4010/4578838483_f9c66aece1_z.jpg"
@@ -116,39 +116,52 @@ var initImageList = [
         }
     ];
 
+function layOutImages (array) {
+    var imageListContainer = document.querySelector("#image-list-container"),
+        newListItems = generateListItems(array);
+
+        // replace initial images with a given list
+        imageListContainer.innerHTML = "";
+        imageListContainer.appendChild(newListItems);
+
+        console.log("I hope you have replaced the pretty pictures with something beautiful!");
+}
+
+function generateListItems (array) {
+    var imageListItems = document.createDocumentFragment();
+
+    // build list elements
+    _.each(array, function (item, index) {
+        var li = document.createElement("li");
+
+        li.classList.add("item");
+        li.innerHTML = "<a class='image-container' target='_blank' href='" + item.url + "'>" +
+                            "<img src='" + item.url + "'>" +
+                        "</a>" +
+                        "<div class='image-title' title='" + item.name + "'>" + item.name + "</div>";
+
+        imageListItems.appendChild(li);
+    });
+
+    return imageListItems;
+}
+
+generateListItems.bind(document);
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
     var imageListContainer = document.querySelector("#image-list-container"),
         showMoreBtn = document.querySelector("#show-more");
 
     function init () {
-        var listItems = generateListItems(initImageList);
+        var listItems = generateListItems(initImageArray);
 
         // add initial images to the list
         imageListContainer.appendChild(listItems);
-
-    }
-
-    function generateListItems (contentList) {
-        var imageListItems = document.createDocumentFragment();
-
-        // build list elements
-        _.each(contentList, function (item, index) {
-            var li = document.createElement("li");
-
-            li.classList.add("item");
-            li.innerHTML = "<a class='image-container' target='_blank' href='" + item.url + "'>" +
-                                "<img src='" + item.url + "'>" +
-                            "</a>" +
-                            "<div class='image-title' title='" + item.name + "'>" + item.name + "</div>";
-            imageListItems.appendChild(li);
-        });
-
-        return imageListItems;
     }
 
     showMoreBtn.addEventListener("click", function () {
-        var addList = generateListItems(addImageList);
+        var addList = generateListItems(addImageArray);
 
         // add images to the list
         imageListContainer.appendChild(addList);
