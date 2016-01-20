@@ -1,2 +1,3 @@
 # imageLibrary
-Pretty pictures
+
+This image library contains pretty pictures.
