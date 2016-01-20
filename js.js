@@ -75,6 +75,9 @@ var initImageList = [
             name: "Pretty",
             url: "https://s-media-cache-ak0.pinimg.com/736x/53/2b/2e/532b2e9f1e0b0f581620cda2923ebed0.jpg"
         }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/bb/2b/e7/bb2be74b678831df7b7989e069379311.jpg"
+        }, {
             name: "Yeah Yeah Yeah Yeah Yeah Yeah",
             url: "https://s-media-cache-ak0.pinimg.com/736x/1d/e7/3d/1de73d5ff0fdcab3c052b5fe0bb373d9.jpg"
         }, {
@@ -86,6 +89,21 @@ var initImageList = [
         }, {
             name: "Pretty",
             url: "https://s-media-cache-ak0.pinimg.com/736x/d9/2f/bf/d92fbffe29d54aef95bb472977e4c14c.jpg"
+        }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/d0/75/b5/d075b57937afc25c8e9b20384659812f.jpg"
+        }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/f0/91/47/f091476c240846ea215a722fc5ee2648.jpg"
+        }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/b2/2a/14/b22a14c0b6fced819ff4baa570e90b3e.jpg"
+        }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/55/3d/91/553d91cd2d8c71aac1668547da1951ee.jpg"
+        }, {
+            name: "Pretty",
+            url: "https://s-media-cache-ak0.pinimg.com/736x/11/cf/be/11cfbee18ea0a177a5d9298f80991c86.jpg"
         }
     ],
     addImageList = [
@@ -119,9 +137,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             var li = document.createElement("li");
 
             li.classList.add("item");
-            li.innerHTML = "<div class='image-container'>" +
+            li.innerHTML = "<a class='image-container' target='_blank' href='" + item.url + "'>" +
                                 "<img src='" + item.url + "'>" +
-                            "</div>" +
+                            "</a>" +
                             "<div class='image-title' title='" + item.name + "'>" + item.name + "</div>";
             imageListItems.appendChild(li);
         });
