@@ -136,8 +136,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     init();
 
-    function layOutImages (contentList) {
-console.log("I took this list:", contentList);
-    }
-
 });
